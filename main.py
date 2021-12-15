@@ -6,7 +6,6 @@ temps = []
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
     return temps
 
 @app.post("/webhook")
