@@ -11,8 +11,9 @@ def read_root():
 
 
 @app.get("/items/{item_id}")
-@@ -24,4 +25,5 @@ def webhook(item):
-@app.post("/webhook/uplink")
+def webhook(item):
+    @app.post("/webhook/uplink")
+
 def uplink(item: dict):
     print(item)
     temps.append(item["uplink_message"]["decoded_payload"])
